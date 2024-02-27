@@ -3,7 +3,7 @@ CREATE OR REPLACE VIEW v_fifth_question AS (
 		year,
 		round(GDP) AS round_GDP,
 		round(avg(payroll)) AS avg_payroll,
-		round(avg(price)) AS avg_price,
+		avg(price) AS avg_price,
 		round(LAG(avg(payroll)) OVER (ORDER BY year)) AS previous_payroll,
 		round(LAG(avg(price)) OVER (ORDER BY year)) AS previous_price,
 		round(LAG(round(GDP)) OVER (ORDER BY year)) AS previous_GDP
