@@ -30,7 +30,7 @@ SELECT
 		WHEN difference_payroll > 5 THEN 'high_growth'
 		WHEN difference_payroll > 0 THEN 'growth'
 		WHEN difference_payroll < 0 THEN 'not_growth'
-	END AS value_growth,
+	END AS payroll_growth,
 	CASE
 		WHEN difference_price > 5 THEN 'high_growth'
 		WHEN difference_price > 0 THEN 'growth'
